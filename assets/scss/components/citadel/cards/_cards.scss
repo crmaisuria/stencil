@@ -1,0 +1,112 @@
+// =============================================================================
+// CARDS (CSS)
+// =============================================================================
+//
+// 1. Using translate3d to counter a chrome specific bug: When using a masonry
+//    styled layout via CSS column-count etc, transforms applied to descendants
+//    are made invisible, except for 3d transforms...
+//
+// -----------------------------------------------------------------------------
+
+
+.card-figure {
+    margin-top: $card-figure-marginTop;
+}
+
+.card-figcaption {
+    display: none;
+    margin: $card-figcaption-margin;
+
+    @include breakpoint("medium") {
+        display: block;
+    }
+}
+
+.card-figcaption-body {
+    display: $card-figcaption-body-display;
+    transform: translate3d(0, -50%, 0); // 1
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-title {
+    font-size: $card-title-fontSize;
+    margin: $card-title-margin;
+
+    > a {
+        color: $card-title-color;
+        text-decoration: $card-title-textDecoration;
+
+        // scss-lint:disable NestingDepth
+        &:hover {
+            color: $card-title-color-hover;
+        }
+    }
+}
+
+.card-text {
+    margin-bottom: $card-text-marginBottom;
+}
+
+.card-figcaption-button {
+    border: $card-figcaption-button-border;
+    display: $card-figcaption-button-display;
+    margin: $card-figcaption-button-margin;
+
+    &:active {
+        background-color: $card-figcaption-button-backgroundHover;
+        border: $card-figcaption-button-border;
+    }
+
+    + .card-figcaption-button {
+        margin: $card-figcaption-button-margin;
+    }
+}
+
+.card-body {
+    text-align: center;
+
+    @include breakpoint("small") {
+        text-align: left;
+    }
+}
+
+
+//
+// Alternate card
+//
+// Purpose: Used to give the card alternative styling
+// -----------------------------------------------------------------------------
+
+.card--alternate {
+    border: 3px solid color("whites", "bright");
+
+    .card-body {
+        background-color: color("whites", "bright");
+        padding: spacing("half");
+
+        @include breakpoint("small") {
+            padding: spacing("single");
+        }
+    }
+
+    .icon--starFull,
+    .icon--starEmpty {
+        display: none;
+    }
+
+    &:hover {
+        border-color: color("greys", "darker");
+
+        // scss-lint:disable SelectorDepth, NestingDepth
+        .card-body {
+            background-color: color("greys", "darker");
+        }
+
+        .card-title > a {
+            color: color("whites", "bright");
+        }
+    }
+}

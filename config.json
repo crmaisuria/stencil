@@ -1,0 +1,482 @@
+{
+  "name": "Stencil",
+  "version": "1.0.1",
+  "meta": {
+    "price": 15000,
+    "documentation_url": "https://docs.bigcommerce.com/stencil.html",
+    "composed_image": "composed_image.png",
+    "features": ["fully_responsive", "product_filtering"]
+  },
+  "css_compiler": "scss",
+  "autoprefixer_cascade": true,
+  "autoprefixer_browsers": ["last 3 versions"],
+  "jspm": {
+    "dev": {
+      "dep_location": "assets/js/dependency-bundle.js",
+      "bootstrap": "js/**/* - [js/**/*]"
+    },
+    "bootstrap": "js/app",
+    "bundle_location": "assets/js/bundle.js",
+    "jspm_packages_path": "assets/jspm_packages"
+  },
+  "settings": {
+    "homepage_new_products_count": 12,
+    "homepage_featured_products_count": 8,
+    "homepage_top_products_count": 8,
+    "homepage_show_carousel": true,
+    "homepage_new_products_column_count": 6,
+    "homepage_featured_products_column_count": 4,
+    "homepage_top_products_column_count": 4,
+    "homepage_blog_posts_count": 3,
+
+    "productpage_videos_count": 8,
+    "productpage_reviews_count": 9,
+    "productpage_related_products_count": 10,
+    "productpage_similar_by_views_count": 10,
+
+    "categorypage_products_per_page": 10,
+    "brandpage_products_per_page": 10,
+    "searchpage_products_per_page": 10,
+
+    "show_product_quick_view": true,
+
+    "default_image_brand": "/assets/img/BrandDefault.gif",
+    "default_image_product": "/assets/img/ProductDefault.gif",
+    "default_image_gift_certificate": "/assets/img/GiftCertificate.png",
+
+    "product_list_display_mode": "grid",
+
+    "color-primary": "#4f4f4f",
+    "color-primaryDark": "#454545",
+    "color-primaryDarker": "#2d2d2d",
+    "color-primaryLight": "#a5a5a5",
+
+    "color-secondary": "#ffffff",
+    "color-secondaryDark": "#f2f2f2",
+    "color-secondaryDarker": "#f2f2f2",
+
+    "color-highlight": "#00abc9",
+    "color-highlightDark": "#f2f2f2",
+    "color-highlightDarker": "#dfdfdf",
+
+    "color-error": "#ff7d7d",
+    "color-errorLight": "#ffdddd",
+    "color-info": "#666666",
+    "color-infoLight": "#dfdfdf",
+    "color-success": "#69d66f",
+    "color-successLight": "#d5ffd8",
+    "color-warning": "#d4cb49",
+    "color-warningLight": "#fffdea",
+
+    "color-textBase": "#4f4f4f",
+    "color-textBase--hover": "#a5a5a5",
+    "color-textBase--active": "#a5a5a5",
+
+    "color-textSecondary": "#989898",
+    "color-textSecondary--hover": "#a5a5a5",
+    "color-textSecondary--active": "#a5a5a5",
+
+    "color-textLink": "#4f4f4f",
+    "color-textLink--hover": "#a5a5a5",
+    "color-textLink--active": "#a5a5a5",
+
+    "color-black": "#000000",
+    "color-white": "#ffffff",
+    "color-whitesBase": "#f8f8f8",
+    "color-grey": "#4f4f4f",
+    "color-greyDarkest": "#2d2d2d",
+    "color-greyDarker": "#454545",
+    "color-greyDark": "#666666",
+    "color-greyMedium": "#989898",
+    "color-greyLight": "#a5a5a5",
+    "color-greyLighter": "#dfdfdf",
+    "color-greyLightest": "#f2f2f2",
+
+    "alert-color": "#4f4f4f",
+    "alert-color-alt": "#ffffff",
+
+    "storeName-color": "#4f4f4f",
+    "header-nav-color": "#4f4f4f",
+
+    "header-backgroundColor": "#ffffff",
+
+    "navPage-subMenu-backgroundColor": "#f2f2f2",
+    "navPage-subMenu-borderColor": "#dfdfdf",
+    "navPage-subMenu-fontColor": "#4f4f4f",
+
+    "body-bg": "#ffffff",
+    "body-font-color": "#4f4f4f",
+    "header-font-color": "#2d2d2d",
+    "subheader-font-color": "#4f4f4f",
+    "small-font-color": "#989898",
+    "blockquote-cite-font-color": "#a5a5a5",
+    "form-label-font-color": "#666666",
+
+    "footer-heading-fontColor": "#2d2d2d",
+    "footer-backgroundColor": "#ffffff",
+
+    "buttonStyle-default-color": "#454545",
+    "buttonStyle-default-colorHover": "#666666",
+    "buttonStyle-default-colorActive": "#454545",
+    "buttonStyle-default-backgroundColor": "#ffffff",
+    "buttonStyle-default-backgroundColorHover": "#ffffff",
+    "buttonStyle-default-backgroundColorActive": "#ffffff",
+    "buttonStyle-default-borderColor": "#dfdfdf",
+    "buttonStyle-default-borderColorHover": "#989898",
+    "buttonStyle-default-borderColorActive": "#454545",
+
+    "buttonStyle-primary-color": "#ffffff",
+    "buttonStyle-primary-colorHover": "#ffffff",
+    "buttonStyle-primary-colorActive": "#ffffff",
+    "buttonStyle-primary-backgroundColor": "#454545",
+    "buttonStyle-primary-backgroundColorHover": "#666666",
+    "buttonStyle-primary-backgroundColorActive": "#989898",
+    "buttonStyle-primary-borderColor": "#454545",
+    "buttonStyle-primary-borderColorHover": "#666666",
+    "buttonStyle-primary-borderColorActive": "#989898",
+
+    "container-border-global-color-base": "#f2f2f2",
+    "container-border-global-color-dark": "#454545",
+    "container-fill-base": "#ffffff",
+    "container-fill-dark": "#f2f2f2",
+
+    "icon-ratingEmpty": "#dfdfdf",
+    "icon-ratingFull": "#454545",
+
+    "card-title-color": "#2d2d2d",
+    "card-title-color-hover": "#a5a5a5",
+    "card-figcaption-button-background": "#ffffff",
+    "card-figcaption-button-color": "#2d2d2d",
+
+    "navList-action-color": "#4f4f4f",
+
+    "navUser-dropdown-menu-backgroundColor": "#ffffff",
+    "navUser-dropdown-borderColor": "f2f2f2",
+
+    "dropdown--quickSearch-backgroundColor": "#f2f2f2",
+
+    "input-font-color": "#454545",
+    "input-border-color": "#f2f2f2",
+    "input-border-color-active": "#989898",
+    "input-bg-color": "#ffffff",
+    "input-disabled-bg": "#ffffff",
+    "select-bg-color": "#ffffff",
+    "select-arrow-color": "#828282",
+    "checkRadio-color": "#4f4f4f",
+    "checkRadio-backgroundColor": "#ffffff",
+    "checkRadio-borderColor": "#dfdfdf",
+
+    "carousel-bgColor": "#ffffff",
+    "carousel-title-color": "#2d2d2d",
+    "carousel-description-color": "#2d2d2d",
+    "carousel-dot-color": "#2d2d2d",
+    "carousel-dot-color-active": "#666666",
+    "carousel-dot-bgColor": "#ffffff",
+    "carousel-arrow-color": "#989898",
+    "carousel-arrow-bgColor": "#ffffff",
+
+    "fontFamily-sans": "Karla, sans-serif",
+    "fontFamily-serif": "Georgia, serif",
+    "fontFamily-mono": "Menlo, monospace",
+    "fontFamily-hero": "Oswald, sans-serif",
+
+    "body-font": "Google_Karla",
+    "headings-font": "Google_Open+Sans_700",
+
+    "fontSize-root": 14,
+    "fontSize-h1": 28,
+    "fontSize-h2": 25,
+    "fontSize-h3": 22,
+    "fontSize-h4": 20,
+    "fontSize-h5": 15,
+    "fontSize-h6": 13,
+
+    "icon-ratingEmpty": "#dfdfdf",
+    "icon-ratingFull": "#454545",
+
+    "icon-color": "#4f4f4f",
+    "icon-color-hover": "#a5a5a5",
+    "button--icon-svg-color": "#4f4f4f",
+
+    "productOption-borderColor": "#dfdfdf",
+    "productOption-borderColor-hover": "#989898",
+    "productOption-borderColor-active": "#454545",
+
+    "overlay-backgroundColor": "#2d2d2d",
+    "loadingOverlay-backgroundColor": "#ffffff",
+
+    "pace-progress-backgroundColor": "#989898",
+    "spinner-borderColor-dark": "#989898",
+    "spinner-borderColor-light": "#ffffff"
+  },
+  "resources": {
+    "cart": true,
+    "shop_by_brand": {
+      "limit": 10
+    }
+  },
+  "images": {
+    "logo": {
+      "width": 250,
+      "height": 100
+    },
+    "thumb": {
+      "width": 100,
+      "height": 100
+    },
+    "product": {
+      "width": 500,
+      "height": 659
+    },
+    "gallery": {
+      "width": 190,
+      "height": 250
+    },
+    "zoom": {
+      "width": 1280,
+      "height": 1280
+    }
+  },
+  "variations": [
+    {
+      "name": "Light",
+      "id": "light",
+      "meta": {
+        "desktop_screenshot": "desktop_light.png",
+        "mobile_screenshot": "mobile_light.png",
+        "description": "This is the light style of the Stencil Theme",
+        "demo_url": "https://stencil-light.mybigcommerce.com",
+        "optimized_for": ["fashion_jewelry", "clothing", "cosmetics"],
+        "industries": []
+      }
+    },
+    {
+      "name": "Bold",
+      "id": "bold",
+      "meta": {
+        "desktop_screenshot": "desktop_bold.png",
+        "mobile_screenshot": "mobile_bold.png",
+        "description": "This is the bold style of the Stencil Theme",
+        "demo_url": "https://stencil-bold.mybigcommerce.com",
+        "documentation_url": "https://docs.bigcommerce.com/stencil.html",
+        "optimized_for": ["fashion_jewelry", "clothing", "cosmetics"],
+        "industries": []
+      },
+      "settings": {
+        "homepage_featured_products_count": 6,
+        "homepage_featured_products_column_count": 3,
+
+        "color-grey": "#999999",
+        "color-greyDarkest": "#262626",
+        "color-greyDarker": "#585858",
+        "color-greyDark": "#737373",
+        "color-greyMedium": "#bfbfbf",
+        "color-greyLight": "#cccccc",
+        "color-greyLighter": "#d9d9d9",
+        "color-greyLightest": "#e5e5e5",
+
+        "color-primary": "#f08383",
+        "color-primaryDark": "#de7a7a",
+        "color-primaryDarker": "#cc7070",
+        "color-primaryLight": "#ff8c8c",
+
+        "color-secondary": "#85cdcf",
+        "color-secondaryDark": "#79babd",
+        "color-secondaryDarker": "#6da9ab",
+
+        "color-textBase": "#ffffff",
+        "color-textBase--hover": "#bfbfbf",
+        "color-textBase--active": "#bfbfbf",
+
+        "color-textSecondary": "#bfbfbf",
+        "color-textSecondary--hover": "#ffffff",
+        "color-textSecondary--active": "#a4a4a4",
+
+        "color-textLink": "#ffffff",
+        "color-textLink--hover": "#bfbfbf",
+        "color-textLink--active": "#bfbfbf",
+
+        "color-error": "#ea8d8d",
+        "color-success": "#8adf8f",
+
+        "alert-color": "#585858",
+        "alert-color-alt": "#ffffff",
+
+        "storeName-color": "#ffffff",
+        "header-backgroundColor": "#585858",
+
+        "navUser-color": "#999999",
+        "navUser-color-hover": "#ffffff",
+
+        "navPages-color": "#ffffff",
+        "navPages-color-hover": "#bfbfbf",
+
+        "navPage-subMenu-backgroundColor": "#737373",
+        "navPage-subMenu-borderColor": "#999999",
+
+        "body-bg": "#585858",
+        "body-font-color": "#ffffff",
+        "header-font-color": "#ffffff",
+        "subheader-font-color": "#bfbfbf",
+        "small-font-color": "#bfbfbf",
+        "form-label-font-color": "#ffffff",
+
+        "footer-heading-fontColor": "#ffffff",
+        "footer-backgroundColor": "#585858",
+
+        "buttonStyle-default-color": "#ffffff",
+        "buttonStyle-default-colorHover": "#ffffff",
+        "buttonStyle-default-colorActive": "#ffffff",
+        "buttonStyle-default-backgroundColor": "transparent",
+        "buttonStyle-default-backgroundColorHover": "transparent",
+        "buttonStyle-default-backgroundColorActive": "transparent",
+        "buttonStyle-default-borderColor": "#797979",
+        "buttonStyle-default-borderColorHover": "#b4b4b4",
+        "buttonStyle-default-borderColorActive": "#7c7c7c",
+
+        "buttonStyle-primary-backgroundColor": "#f08383",
+        "buttonStyle-primary-backgroundColorHover": "#c76d6d",
+        "buttonStyle-primary-backgroundColorActive": "#a35a5a",
+        "buttonStyle-primary-borderColor": "#f08383",
+        "buttonStyle-primary-borderColorHover": "#c76d6d",
+        "buttonStyle-primary-borderColorActive": "#a35a5a",
+
+        "buttonStyle-disabled-color": "#535353",
+        "buttonStyle-disabled-backgroundColor": "#737373",
+        "buttonStyle-disabled-borderColor": "#737373",
+
+        "container-border-global-color-base": "#535353",
+        "container-border-global-color-dark": "#262626",
+        "container-fill-base": "#585858",
+        "container-fill-dark": "#4c4c4c",
+
+        "card-title-color": "#f08383",
+        "card-title-color-hover": "#f39a9a",
+        "card-figcaption-button-background": "#85cdcf",
+        "card-figcaption-button-color": "#ffffff",
+
+        "navList-action-color": "#ffffff",
+
+        "navUser-dropdown-backgroundColor": "#4c4c4c",
+        "navUser-dropdown-borderColor": "transparent",
+        "dropdown--quickSearch-backgroundColor": "#737373",
+
+        "input-font-color": "#d9d9d9",
+        "input-border-color": "#828282",
+        "input-border-color-active": "#9f9f9f",
+        "input-bg-color": "#585858",
+        "input-disabled-bg": "#585858",
+        "select-bg-color": "#585858",
+        "select-arrow-color": "#828282",
+        "checkRadio-color": "#ffffff",
+        "checkRadio-backgroundColor": "#585858",
+        "checkRadio-borderColor": "#828282",
+
+        "carousel-bgColor": "#585858",
+        "carousel-title-color": "#ffffff",
+        "carousel-description-color": "#ffffff",
+        "carousel-dot-color": "#2d2d2d",
+        "carousel-dot-color-active": "#f08383",
+        "carousel-dot-bgColor": "#ffffff",
+        "carousel-arrow-color": "#999999",
+        "carousel-arrow-bgColor": "#ffffff",
+
+        "fontFamily-sans": "'Source Sans Pro', sans-serif",
+        "fontFamily-headings": "'Roboto', sans-serif",
+
+        "icon-ratingEmpty": "#696969",
+        "icon-ratingFull": "#7fc0c2",
+
+        "icon-color": "#ffffff",
+        "icon-color-hover": "#bfbfbf",
+        "button--icon-svg-color": "#ffffff",
+
+        "productOption-borderColor": "#797979",
+        "productOption-borderColor-hover": "#b4b4b4",
+        "productOption-borderColor-active": "#ffffff",
+
+        "overlay-backgroundColor": "#343434",
+        "loadingOverlay-backgroundColor": "585858",
+
+        "pace-progress-backgroundColor": "7fc0c2",
+        "spinner-borderColor-dark": "737373",
+        "spinner-borderColor-light": "f08383"
+      }
+    },
+    {
+      "name": "Warm",
+      "id": "warm",
+      "meta": {
+        "desktop_screenshot": "desktop_warm.png",
+        "mobile_screenshot": "mobile_warm.png",
+        "description": "This is the warm style of the Stencil Theme",
+        "demo_url": "https://stencil-warm.mybigcommerce.com",
+        "documentation_url": "https://docs.bigcommerce.com/stencil.html",
+        "optimized_for": ["fashion_jewelry", "clothing", "cosmetics"],
+        "industries": []
+      },
+      "settings": {
+        "fontFamily-sans": "Roboto, sans-serif",
+        "fontFamily-serif": "Volkhov, serif",
+        "fontFamily-headings": "Volkhov, sans-serif",
+
+        "color-orange": "#b37134",
+        "color-orangeDark": "#a1662f",
+        "color-orangeDarker": "#8f5a29",
+        "color-orangeLight": "#c77e3a",
+
+        "color-brown": "#a18d7a",
+        "color-brownDark": "#736457",
+        "color-brownDarker": "#61544a",
+        "color-brownLight": "#b39c88",
+
+        "color-primary": "#B37134",
+        "color-primaryDark": "#a1662f",
+        "color-primaryDarker": "#8f5a29",
+        "color-primaryLight": "#c77e3a",
+
+        "color-secondary": "#a18d7a",
+        "color-secondaryDark": "#736457",
+        "color-secondaryDarker": "#61544a",
+
+        "color-textBase": "#a18d7a",
+        "color-textBase--hover": "#736457",
+        "color-textBase--active": "#736457",
+
+        "color-textLink": "#a18d7a",
+        "color-textLink--hover": "#736457",
+        "color-textLink--active": "#736457",
+
+        "storeName-color": "#a18d7a",
+        "header-nav-color": "#a18d7a",
+
+        "body-font-color": "#a18d7a",
+        "header-font-color": "#736457",
+        "subheader-font-color": "#736457",
+        "small-font-color": "#b39c88",
+        "blockquote-cite-font-color": "#b39c88",
+        "form-label-font-color": "#a18d7a",
+        "footer-heading-fontColor": "#736457",
+
+        "buttonStyle-primary-backgroundColor": "#b37134",
+        "buttonStyle-primary-backgroundColorHover": "#c77e3a",
+        "buttonStyle-primary-backgroundColorActive": "#a1662f",
+        "buttonStyle-primary-borderColor": "#b37134",
+        "buttonStyle-primary-borderColorHover": "#c77e3a",
+        "buttonStyle-primary-borderColorActive": "#a1662f",
+
+        "card-title-color": "#736457",
+        "card-title-color-hover": "#736457",
+
+        "carousel-bgColor": "#db8a40",
+        "carousel-title-color": "#ffffff",
+        "carousel-description-color": "#ffffff",
+        "carousel-dot-color": "#2d2d2d",
+        "carousel-dot-color-active": "#b37134",
+        "carousel-dot-bgColor": "#db8a40",
+        "carousel-arrow-color": "#db8a40",
+        "carousel-arrow-bgColor": "#ffffff"
+      }
+    }
+  ]
+}

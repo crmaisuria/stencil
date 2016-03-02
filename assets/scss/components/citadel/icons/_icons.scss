@@ -1,0 +1,13 @@
+// =============================================================================
+// ICONS (CSS)
+//
+// 1. Hide the SVG sprite with CSS, not inline styles
+// =============================================================================
+
+.icons-svg-sprite {
+    display: none; // 1
+}
+
+.icon {
+    transition: all 0.15s ease;
+}

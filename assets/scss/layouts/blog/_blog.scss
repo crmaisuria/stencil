@@ -1,0 +1,101 @@
+// =============================================================================
+// BLOG
+// =============================================================================
+
+
+// Blog post
+// -----------------------------------------------------------------------------
+
+.blog {
+    margin: 0 auto spacing("single");
+    width: grid-calc(8, $total-columns);
+
+    + .blog {
+        border-top: 1px solid color("greys", "lightest");
+        margin-top: spacing("double");
+        padding-top: spacing("double");
+    }
+
+    .tags {
+        margin-top: spacing("double");
+        text-align: center;
+
+        @include breakpoint("medium") {
+            margin-left: spacing("single");
+            text-align: left;
+        }
+    }
+
+    .socialLinks {
+        text-align: center;
+
+        @include breakpoint("medium") {
+            margin-left: spacing("single");
+            text-align: left;
+        }
+    }
+
+    // scss-lint:disable SelectorFormat
+    .addthis_toolbox {
+        margin-top: spacing("double");
+    }
+    // scss-lint:enable SelectorFormat
+}
+
+.blog-title {
+    font-size: fontSize("large");
+    margin: 0 spacing("single") spacing("quarter");
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.blog-date,
+.blog-author {
+    color: color("greys", "medium");
+    text-align: center;
+
+    @include breakpoint("medium") {
+        margin-left: spacing("single");
+        text-align: left;
+    }
+}
+
+.blog-author {
+    margin-bottom: spacing("single") + spacing("base");
+}
+
+.blog-post {
+    font-size: fontSize("smaller");
+
+    @include breakpoint("medium") {
+        margin-left: spacing("single");
+    }
+}
+
+.blog-thumbnail {
+    margin: 0 0 (spacing("base") * 2);
+}
+
+.blog-post-figure {
+    display: block;
+    text-align: center;
+
+    @include breakpoint("medium") {
+        float: left;
+        margin: 0;
+        position: relative;
+        width: 20%;
+    }
+}
+
+.blog-post-body {
+    display: block;
+    text-align: center;
+
+    @include breakpoint("medium") {
+        margin-left: 20%;
+        text-align: left;
+    }
+}

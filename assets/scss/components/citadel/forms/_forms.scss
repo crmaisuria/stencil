@@ -1,0 +1,289 @@
+// =============================================================================
+// FORMS (CSS)
+// =============================================================================
+
+
+// Form variants
+// -----------------------------------------------------------------------------
+
+.form--hiddenLabels {
+
+    .form-label {
+        @include u-hidden("visually");
+    }
+}
+
+
+// Citadel inline messages
+// -----------------------------------------------------------------------------
+
+.form-inlineMessage {
+    display: block;
+}
+
+
+// Citadel field states
+// -----------------------------------------------------------------------------
+
+.form-field--error {
+
+    .form-input {
+        float: none;
+    }
+
+    .form-inlineMessage {
+
+        // scss-lint:disable NestingDepth
+        &:before {
+            background: $form-error-icon no-repeat;
+            background-size: $form-inlineMessage-backgroundSize;
+            content: "";
+            display: inline-block;
+            height: $form-error-icon-height;
+            left: $form-error-icon-left;
+            margin-right: $form-error-icon-marginRight;
+            position: relative;
+            top: $form-error-icon-top;
+            width: $form-error-icon-width;
+        }
+    }
+}
+
+.form-field--success {
+
+    .form-input[type="text"] {
+        background: {
+            image: $form-success-icon;
+            position: right $form-success-icon-right center;
+            repeat: no-repeat;
+        }
+        padding-right: $form-success-input-paddingRight;
+    }
+}
+
+
+// Citadel checkbox/radio positioning
+// -----------------------------------------------------------------------------
+
+.form-checkbox,
+.form-radio {
+
+    + .form-label {
+
+        // scss-lint:disable NestingDepth
+        &:last-child {
+            display: block;
+            margin-bottom: $form-checkRadio-label-last-marginBottom;
+        }
+
+        &::after {
+            top: $form-checkRadio-labelAfter-top;
+        }
+
+        &::before {
+            top: $form-checkRadio-labelBefore-top;
+        }
+    }
+}
+
+
+// Citadel form-actions
+// -----------------------------------------------------------------------------
+
+.form-actions {
+    @include grid-row();
+    display: block;
+    text-align: center;
+
+    @include breakpoint("small") {
+        margin-top: spacing("single");
+    }
+
+    .button {
+        margin: 0 0 spacing("half");
+        width: 100%;
+
+        @include breakpoint("small") {
+            margin: 0 0 0 spacing("half");
+            width: auto;
+        }
+    }
+}
+
+// Stencil form additions
+// -----------------------------------------------------------------------------
+
+.form-label--alternate {
+    font-family: fontFamily("headingSans");
+    font-size: fontSize("smallest");
+    margin-bottom: spacing("half");
+}
+
+.form-select--date {
+    width: initial;
+
+    + .form-select--date {
+        margin-left: spacing("quarter");
+    }
+}
+
+.form-select--small,
+.form-select--date {
+    background-position: right spacing("third") top spacing("third");
+    background-size: remCalc(18px);
+    font-size: $input-small-fontSize;
+    height: $input-small-height;
+    line-height: 1rem;
+    max-width: 20rem;
+    padding: $input-small-padding;
+}
+
+.form-select--short {
+    max-width: 6rem;
+    width: 4.5rem;
+}
+
+.form-file {
+    margin-bottom: spacing("third");
+}
+
+.form-fileDescription {
+    color: color("greys", "light");
+    font-size: fontSize("smallest");
+}
+
+.form-field-group {
+    border: $input-border-width $input-border-style $input-border-color;
+    border-radius: $input-border-radius;
+    padding: spacing("single");
+}
+
+// This component should live inside a .form-row
+.form-column {
+    @include grid-column(12);
+
+    @include breakpoint("small") {
+        @include grid-column(6);
+    }
+}
+
+//TODO This probably needs to be changed in Citadel BIG-20499
+.form-prefixPostfix.nowrap {
+    flex-wrap: wrap;
+}
+
+// Increment field
+// -----------------------------------------------------------------------------
+
+.form-increment {
+    .button {
+        margin: 0;
+        padding: remCalc(3px) remCalc(5px);
+    }
+}
+
+.form-input--incrementTotal {
+    border: 0;
+    display: inline-block;
+    font-size: fontSize("smaller");
+    font-weight: fontWeight("bold");
+    height: auto;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: remCalc(35px);
+}
+
+
+// Stencil form options
+// -----------------------------------------------------------------------------
+//
+// 1. Issue with FastClick JS library workaround: https://github.com/ftlabs/fastclick/issues/351
+//
+
+.form-option {
+    border: 1px solid stencilColor("productOption-borderColor");
+    color: $form-label-font-color;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: spacing("quarter");
+    padding: 1px;
+    transition: all 0.15s ease;
+
+    &:hover {
+        border-color: stencilColor("productOption-borderColor-hover");
+    }
+
+    .form-radio:checked + & {
+        border-color: stencilColor("productOption-borderColor-active");
+        box-shadow: 0 0 0 1px stencilColor("productOption-borderColor-active");
+    }
+}
+
+.form-option-variant {
+    display: inline-block;
+    min-width: remCalc(38px);
+    padding: 1px spacing("quarter");
+    pointer-events: none; // 1
+    text-align: center;
+}
+
+.form-option-variant--color,
+.form-option-variant--pattern {
+    @include square(22);
+    float: left;
+    min-width: initial;
+    padding: 0;
+}
+
+.form-option-variant--pattern {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+// Form input (small)
+// -----------------------------------------------------------------------------
+.form-input--small {
+    font-size: $input-small-fontSize;
+    height: $input-small-height;
+    line-height: 1rem;
+    padding: $input-small-padding;
+}
+
+
+// Form min/max input row
+// -----------------------------------------------------------------------------
+.form-minMaxRow {
+    @include clearfix();
+    margin-left: -$form-minMaxRow-column-gutter;
+    margin-right: -$form-minMaxRow-column-gutter;
+
+    .form-field {
+        @include grid-column(4);
+        margin-bottom: 0;
+        padding-left: $form-minMaxRow-column-gutter;
+        padding-right: $form-minMaxRow-column-gutter;
+    }
+
+    .button {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+}
+
+
+// Form row modifications
+// -----------------------------------------------------------------------------
+//
+// 1. If there are more than 2 fields per form-row--half, clear the left of every
+// odd one.
+//
+// -----------------------------------------------------------------------------
+
+.form-row--half > .form-field:nth-child(odd) {
+    @include breakpoint("small") {
+        clear: left;
+    }
+}

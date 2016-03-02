@@ -1,0 +1,33 @@
+{{#if banners.top}}
+<div class="banners" data-banner-location="top">
+    {{#each banners.top}}
+    <div class="banner">
+        {{{this}}}
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+<header class="header" role="banner">
+    <a href="#" class="mobileMenu-toggle" data-mobilemenu aria-controls="mobile-menu" aria-expanded="false">
+        <span class="mobileMenu-toggleIcon">Toggle menu</span>
+    </a>
+
+    {{> components/common/navigation}}
+
+    {{#if template_file '===' 'pages/home'}}
+        <h1 class="header-logo">
+            {{> components/common/store-logo}}
+        </h1>
+    {{else}}
+        <div class="header-logo">
+            {{> components/common/store-logo}}
+        </div>
+    {{/if}}
+
+
+    <div class="navPages-container" id="mobile-menu">
+        {{> components/common/navigation-mobile}}
+    </div>
+
+</header>
+
